@@ -14,7 +14,7 @@ function App() {
       <div>
         <h1>Add New Task</h1>
         {task.map((task, index) => {
-          return (<p>{task}</p>)
+          return (<p key={index}>{task}</p>)
         })}
         {/* new spreading operator with setting new array and their tasks,,,, */}
         <button onClick={() => { setTask((t) => [...t, "new task"]) }}>Add Task +</button>
